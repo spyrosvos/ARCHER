@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<aiml>
+<!-- Free software &copy; 2001-2003 ALICE A.I. Foundation. -->
+<!-- This program is open source code released under -->
+<!-- the terms of the GNU General Public License     -->
+<!-- as published by the Free Software Foundation.   -->
+<!-- Complies with AIML 1.01 Tag Set Specification -->
+<!-- as adopted by the ALICE A.I. Foundation.  -->
+<!-- Annotated Version updated September 2003 -->
+<category>
+	<pattern>*</pattern>
+	<template>
+		<random>
+			<li>I'm sorry I don't understand</li>
+			<li>I beg your pardon?</li>
+			<li>Could you explain that in different words?</li>
+			<li>Huh?</li>
+			<li>You aren't making sense to me...</li>
+		</random>
+	</template>
+</category>
+
+<category>
+	<pattern>HELLO</pattern>
+	<template>Hi there!$show sign1$pos sign1 5.3 2 -1$</template>
+</category>
+
+  <category>
+    <pattern>HELLO THERE</pattern>
+    <template>Hi there!$show sign1$pos sign1 3.1 1 2.5$</template>
+  </category>
+
+  <category>
+		<pattern>HI</pattern>
+		<template>Hello to you!$hide sign1$</template>
+  </category>
+
+  <category>
+    <pattern>FACTORY *</pattern>
+    <template><srai>FACTORY</srai></template>
+  </category>
+
+  <category>
+    <pattern>* FACTORY</pattern>
+    <template>
+      <srai>FACTORY</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>* FACTORY *</pattern>
+    <template>
+      <srai>FACTORY</srai>
+    </template>
+  </category>
+  
+  <category>
+    <pattern>FACTORY</pattern>
+    <template>This is the Anerousis Lead Factory</template>
+  </category>
+  
+
+</aiml>
